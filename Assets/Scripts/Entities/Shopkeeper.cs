@@ -8,7 +8,7 @@ public class Shopkeeper : MonoBehaviour
 {
 
     public TextMeshProUGUI interactionText;
-    public List<Shirt> inventory;
+    public List<Shirt> inventory = new List<Shirt>();
     [SerializeField] Shirt redShirt, blueShirt, greenShirt;
     public Image[] shopkeeperCanvas;
 
@@ -19,27 +19,12 @@ public class Shopkeeper : MonoBehaviour
         inventory.Add(redShirt);
         inventory.Add(blueShirt);
         inventory.Add(greenShirt);
-        int index = 0 ;
-		foreach (Shirt shirt in inventory)
-        {
-			try {
-                shopkeeperCanvas[index].sprite = shirt.shirtIcon;
-                index++;
-			}
-			catch
-			{
-                break;
-			}
-            
-        }
-        index = 0;
+        UpdateItems();
 
     }
 
     // Update is called once per frame
-    void Update()
-    {
-    }
+
 
 	private void OnCollisionEnter2D(Collision2D collision)
 	{
@@ -56,6 +41,32 @@ public class Shopkeeper : MonoBehaviour
         interactionText.SetText("");
         Debug.Log("Something left");
         other.gameObject.GetComponent<Player>().shopOpenable = false;
+
+    }
+
+
+	public void UpdateItems()
+	{
+		foreach (Image item in shopkeeperCanvas)
+		{
+            item.sprite = null;
+		}
+        int index = 0;
+        foreach (Shirt shirt in inventory)
+        {
+            try
+            {
+                shopkeeperCanvas[index].sprite = shirt.shirtIcon;
+                index++;
+            }
+            catch
+            {
+                shopkeeperCanvas[index].sprite = null;
+                continue;
+            }
+
+        }
+        index = 0;
 
     }
 }

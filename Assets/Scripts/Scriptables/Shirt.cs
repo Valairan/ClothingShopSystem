@@ -7,4 +7,5 @@ public class Shirt : ScriptableObject
 {
 	public Sprite shirtIcon;
 	public string equipedName;
+	public float Price;
 }

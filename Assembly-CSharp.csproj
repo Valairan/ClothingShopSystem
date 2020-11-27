@@ -55,10 +55,11 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\Entities\Shopkeeper.cs" />
-    <Compile Include="Assets\Scripts\Handlers\InputHandler.cs" />
     <Compile Include="Assets\Scripts\Entities\Player.cs" />
     <Compile Include="Assets\Scripts\Scriptables\Shirt.cs" />
+    <Compile Include="Assets\Scripts\Handlers\InputHandler.cs" />
+    <Compile Include="Assets\Scripts\Entities\Shopkeeper.cs" />
+    <Compile Include="Assets\Scripts\Handlers\ShopHandler.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\Assets\uipack_fixed\license.txt" />

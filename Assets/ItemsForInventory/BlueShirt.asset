@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shirtIcon: {fileID: 2045932201401452054, guid: 0a23d22a12cd13d46a8b40f72829a429, type: 3}
   equipedName: BlueShirt
+  Price: 25

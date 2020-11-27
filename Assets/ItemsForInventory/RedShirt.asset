@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shirtIcon: {fileID: 2045932201401452054, guid: f546150ba4eb8d840aebfe58293acb33, type: 3}
   equipedName: RedShirt
+  Price: 25

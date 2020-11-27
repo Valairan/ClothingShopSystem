@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::RedShirt
   shirtIcon: {fileID: 3781195800295602885, guid: 0a23d22a12cd13d46a8b40f72829a429, type: 3}
   equipedName: GreenShirt
+  Price: 25
